@@ -21,26 +21,35 @@ warnings.filterwarnings('ignore')
 import pandas as pd
 from plotnine import *
 ~~~
-## 파일 불러오기
+## 데이터 불러오기 & 내용 파악
 ~~~python
 shop_2016 = pd.read_csv('D:/2-1/pyfinal/201606_01.csv', encoding='cp949')
 
-print(shop_2016.head(3))
-print(shop_2016.tail(3))
+print(shop_2016.head(5))
+print(shop_2016.tail(5))
 print(shop_2016.columns)
 ~~~
+![1](https://user-images.githubusercontent.com/51190969/58799201-a624c500-863f-11e9-8404-0848b1c013ca.png)
+
 ## 변수 제거
+39개의 변수 중 필요한 12개의 변수만 가져옴
 ~~~python
 shop_2016 = shop_2016[['상호명', '지점명', '상권업종대분류명', '상권업종중분류명',
               '상권업종소분류명', '시도명', '시군구명',
               '행정동명', '법정동명', '지번주소','도로명주소', '경도', '위도']]
 ~~~
+
+## shop_2016 산점도 그리기
+데이터 크기가 너무 커서 1000개만 그림
 ~~~python
 a=(ggplot(shop_2016[:1000])
  + aes(x='경도', y='위도')
  + geom_point())
 print(a)
+~~~
+![Figure_1](https://user-images.githubusercontent.com/51190969/58798854-bf794180-863e-11e9-9d1c-1385ab2029d9.png)
 
+~~~python
 seoul_6 = shop_2016.loc[shop_2016['시도명']=='서울특별시']
 pusan_6 = shop_2016.loc[shop_2016['시도명']=='부산광역시']
 print(seoul_6.shape)
@@ -122,7 +131,7 @@ i=(ggplot(pusan_6)
 )
 print(i)
 ~~~
-![Figure_1](https://user-images.githubusercontent.com/51190969/58798854-bf794180-863e-11e9-9d1c-1385ab2029d9.png)
+
 ![Figure_2-2](https://user-images.githubusercontent.com/51190969/58798869-ca33d680-863e-11e9-9fe1-fde7817467e9.png)
 ![Figure_3-2](https://user-images.githubusercontent.com/51190969/58798882-d1f37b00-863e-11e9-82b6-9fdd3441abc8.png)
 ![Figure_4-2](https://user-images.githubusercontent.com/51190969/58798889-d61f9880-863e-11e9-8f37-fa41b8ac897d.png)

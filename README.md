@@ -49,19 +49,25 @@ print(a)
 ~~~
 ![Figure_1](https://user-images.githubusercontent.com/51190969/58798854-bf794180-863e-11e9-9d1c-1385ab2029d9.png)
 
+## 서울과 부산으로 데이터 분류
 ~~~python
 seoul_6 = shop_2016.loc[shop_2016['시도명']=='서울특별시']
 pusan_6 = shop_2016.loc[shop_2016['시도명']=='부산광역시']
 print(seoul_6.shape)
 print(pusan_6.shape)
-
-
+~~~
+(493945, 39)
+(158707, 39)
+~~~python
 b=(ggplot(seoul_6)
  + aes(x='경도', y='위도')
  + geom_point(color='black', alpha=0.2, size=0.2)
 )
 print(b)
+~~~
+![Figure_2-2](https://user-images.githubusercontent.com/51190969/58798869-ca33d680-863e-11e9-9fe1-fde7817467e9.png)
 
+~~~python
 print(shop_2016['도로명주소'].head(3))
 print(shop_2016.shape)
 shop_2016['시도'] = shop_2016['도로명주소'].str.split(' ', expand=True)[0]
@@ -132,7 +138,7 @@ i=(ggplot(pusan_6)
 print(i)
 ~~~
 
-![Figure_2-2](https://user-images.githubusercontent.com/51190969/58798869-ca33d680-863e-11e9-9fe1-fde7817467e9.png)
+
 ![Figure_3-2](https://user-images.githubusercontent.com/51190969/58798882-d1f37b00-863e-11e9-82b6-9fdd3441abc8.png)
 ![Figure_4-2](https://user-images.githubusercontent.com/51190969/58798889-d61f9880-863e-11e9-8f37-fa41b8ac897d.png)
 ![Figure_5-2](https://user-images.githubusercontent.com/51190969/58798890-d61f9880-863e-11e9-95d2-75ae669f0b9f.png)

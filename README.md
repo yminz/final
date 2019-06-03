@@ -21,6 +21,7 @@ warnings.filterwarnings('ignore')
 import pandas as pd
 from plotnine import *
 ~~~
+
 ## 데이터 불러오기 & 내용 파악
 ~~~python
 shop_2016 = pd.read_csv('D:/2-1/pyfinal/201606_01.csv', encoding='cp949')
@@ -32,7 +33,7 @@ print(shop_2016.columns)
 ![1](https://user-images.githubusercontent.com/51190969/58799201-a624c500-863f-11e9-8404-0848b1c013ca.png)
 
 ## 변수 제거
-39개의 변수 중 필요한 12개의 변수만 가져옴
+39개의 변수 중 13개의 변수만 가져옴
 ~~~python
 shop_2016 = shop_2016[['상호명', '지점명', '상권업종대분류명', '상권업종중분류명',
               '상권업종소분류명', '시도명', '시군구명',
@@ -56,8 +57,8 @@ pusan_6 = shop_2016.loc[shop_2016['시도명']=='부산광역시']
 print(seoul_6.shape)
 print(pusan_6.shape)
 ~~~
-(493945, 39)
-(158707, 39)
+(493945, 13)
+(158707, 13)
 ~~~python
 b=(ggplot(seoul_6)
  + aes(x='경도', y='위도')
@@ -67,14 +68,24 @@ print(b)
 ~~~
 ![Figure_2-2](https://user-images.githubusercontent.com/51190969/58798869-ca33d680-863e-11e9-9fe1-fde7817467e9.png)
 
+## 변수 추가 : 시도, 구군
 ~~~python
 print(shop_2016['도로명주소'].head(3))
 print(shop_2016.shape)
+~~~
+![2](https://user-images.githubusercontent.com/51190969/58800131-0caae280-8642-11e9-976a-61c46d29751b.PNG)
+(652652,13)
+~~~python
 shop_2016['시도'] = shop_2016['도로명주소'].str.split(' ', expand=True)[0]
 shop_2016['구군'] = shop_2016['도로명주소'].str.split(' ', expand=True)[1]
 print(shop_2016.shape)
 print(shop_2016.columns)
+~~~
+(652652, 15)
+![3](https://user-images.githubusercontent.com/51190969/58800132-0caae280-8642-11e9-8c68-421a799b2e72.PNG)
 
+## 분류된 구군 변수를 이용해 서울특별시 지도 생성
+~~~python
 seoul_6 = shop_2016.loc[shop_2016['시도명']=='서울특별시']
 pusan_6 = shop_2016.loc[shop_2016['시도명']=='부산광역시']
 

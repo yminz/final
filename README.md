@@ -20,18 +20,22 @@ import warnings
 warnings.filterwarnings('ignore')
 import pandas as pd
 from plotnine import *
-
+~~~
+## 파일 불러오기
+~~~python
 shop_2016 = pd.read_csv('D:/2-1/pyfinal/201606_01.csv', encoding='cp949')
 
 print(shop_2016.head(3))
 print(shop_2016.tail(3))
 print(shop_2016.columns)
-
+~~~
+## 변수 제거
+~~~python
 shop_2016 = shop_2016[['상호명', '지점명', '상권업종대분류명', '상권업종중분류명',
               '상권업종소분류명', '시도명', '시군구명',
               '행정동명', '법정동명', '지번주소','도로명주소', '경도', '위도']]
-
-
+~~~
+~~~python
 a=(ggplot(shop_2016[:1000])
  + aes(x='경도', y='위도')
  + geom_point())

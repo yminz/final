@@ -95,17 +95,28 @@ c=(ggplot(seoul_6)
  + scale_fill_gradient(low = 'blue', high = 'green')
 )
 print(c)
+~~~
+![Figure_3-2](https://user-images.githubusercontent.com/51190969/58798882-d1f37b00-863e-11e9-82b6-9fdd3441abc8.png)
 
+~~~python
 print(seoul_6['상권업종대분류명'].value_counts())
 print(seoul_6['상권업종중분류명'].value_counts())
-
+~~~
+![4](https://user-images.githubusercontent.com/51190969/58800663-665fdc80-8643-11e9-9ba3-6197ece37707.PNG)
+![5](https://user-images.githubusercontent.com/51190969/58800664-66f87300-8643-11e9-81a0-be8038f85dd1.PNG)
+## 상권업종대분류 지도
+~~~python
 d=(ggplot(shop_seoul_6)
  + aes(x='경도', y='위도', color='상권업종대분류명')
  + geom_point(alpha=0.2, size=0.2)
  + scale_fill_gradient(low = 'blue', high = 'green')
 )
 print(d)
+~~~
+![Figure_4-2](https://user-images.githubusercontent.com/51190969/58798889-d61f9880-863e-11e9-8f37-fa41b8ac897d.png)
 
+## 학문/교육 지도
+~~~python
 seoul_6_edu = seoul_6[seoul_6['상권업종대분류명'] == '학문/교육']
 
 e=(ggplot(seoul_6_edu)
@@ -114,7 +125,11 @@ e=(ggplot(seoul_6_edu)
  + scale_fill_gradient(low = 'blue', high = 'green')
 )
 print(e)
+~~~
+![Figure_5-2](https://user-images.githubusercontent.com/51190969/58798890-d61f9880-863e-11e9-95d2-75ae669f0b9f.png)
 
+## 부동산 지도
+~~~python
 seoul_6_house = seoul_6[seoul_6['상권업종대분류명'] == '부동산']
 
 f=(ggplot(seoul_6_house)
@@ -123,7 +138,11 @@ f=(ggplot(seoul_6_house)
  + scale_fill_gradient(low = 'blue', high = 'green')
 )
 print(f)
+~~~
+![Figure_6-2](https://user-images.githubusercontent.com/51190969/58798891-d61f9880-863e-11e9-8255-75c3c6dfc738.png)
 
+## 컴퓨터 학원 지도
+~~~python
 seoul_6_pc = seoul_6[seoul_6['상권업종중분류명'] == '학원-컴퓨터']
 
 g=(ggplot(seoul_6_pc)
@@ -132,7 +151,11 @@ g=(ggplot(seoul_6_pc)
  + scale_fill_gradient(low = 'blue', high = 'green')
 )
 print(g)
+~~~
+![Figure_7-2](https://user-images.githubusercontent.com/51190969/58798892-d6b82f00-863e-11e9-99b3-7de09f517c07.png)
 
+## 커피점/카페 지도
+~~~python
 seoul_6_eat = seoul_6[seoul_6['상권업종중분류명'] == '커피점/카페']
 
 h=(ggplot(seoul_6_eat)
@@ -141,19 +164,18 @@ h=(ggplot(seoul_6_eat)
  + scale_fill_gradient(low = 'blue', high = 'green')
 )
 print(h)
+~~~
+![Figure_8-2](https://user-images.githubusercontent.com/51190969/58798895-d6b82f00-863e-11e9-94c9-55792f979552.png)
 
+## 부산광역시 지도
+~~~python
 i=(ggplot(pusan_6)
  + aes(x='경도', y='위도', color='구군')
  + geom_point(size=0.7)
 )
 print(i)
 ~~~
-
-
-![Figure_3-2](https://user-images.githubusercontent.com/51190969/58798882-d1f37b00-863e-11e9-82b6-9fdd3441abc8.png)
-![Figure_4-2](https://user-images.githubusercontent.com/51190969/58798889-d61f9880-863e-11e9-8f37-fa41b8ac897d.png)
-![Figure_5-2](https://user-images.githubusercontent.com/51190969/58798890-d61f9880-863e-11e9-95d2-75ae669f0b9f.png)
-![Figure_6-2](https://user-images.githubusercontent.com/51190969/58798891-d61f9880-863e-11e9-8255-75c3c6dfc738.png)
-![Figure_7-2](https://user-images.githubusercontent.com/51190969/58798892-d6b82f00-863e-11e9-99b3-7de09f517c07.png)
-![Figure_8-2](https://user-images.githubusercontent.com/51190969/58798895-d6b82f00-863e-11e9-94c9-55792f979552.png)
 ![Figure_9-2](https://user-images.githubusercontent.com/51190969/58798896-d6b82f00-863e-11e9-8ad3-c72a774390a7.png)
+
+![4](https://user-images.githubusercontent.com/51190969/58800663-665fdc80-8643-11e9-9ba3-6197ece37707.PNG)
+![5](https://user-images.githubusercontent.com/51190969/58800664-66f87300-8643-11e9-81a0-be8038f85dd1.PNG)

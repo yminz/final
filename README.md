@@ -127,6 +127,8 @@ e=(ggplot(seoul_6_edu)
 print(e)
 ~~~
 ![Figure_5-2](https://user-images.githubusercontent.com/51190969/58798890-d61f9880-863e-11e9-95d2-75ae669f0b9f.png)
+![Figure_5-2](https://user-images.githubusercontent.com/51190969/58800895-0f0e3c00-8644-11e9-94c8-b6aac0b1a725.png)
+![Figure_5-2](https://user-images.githubusercontent.com/51190969/58801046-6f9d7900-8644-11e9-8070-c5d4e5387095.png)
 
 ## 부동산 지도
 ~~~python
@@ -140,6 +142,8 @@ f=(ggplot(seoul_6_house)
 print(f)
 ~~~
 ![Figure_6-2](https://user-images.githubusercontent.com/51190969/58798891-d61f9880-863e-11e9-8255-75c3c6dfc738.png)
+![Figure_6-2](https://user-images.githubusercontent.com/51190969/58800898-0fa6d280-8644-11e9-8262-09272900587d.png)
+![Figure_6-2](https://user-images.githubusercontent.com/51190969/58801048-70360f80-8644-11e9-84a9-db1d21642723.png)
 
 ## 컴퓨터 학원 지도
 ~~~python
@@ -153,6 +157,8 @@ g=(ggplot(seoul_6_pc)
 print(g)
 ~~~
 ![Figure_7-2](https://user-images.githubusercontent.com/51190969/58798892-d6b82f00-863e-11e9-99b3-7de09f517c07.png)
+![Figure_7-2](https://user-images.githubusercontent.com/51190969/58800902-0fa6d280-8644-11e9-883c-8cbbc7d2a64f.png)
+![Figure_7-2](https://user-images.githubusercontent.com/51190969/58801049-70360f80-8644-11e9-96e9-7e6193e56a01.png)
 
 ## 커피점/카페 지도
 ~~~python
@@ -166,6 +172,8 @@ h=(ggplot(seoul_6_eat)
 print(h)
 ~~~
 ![Figure_8-2](https://user-images.githubusercontent.com/51190969/58798895-d6b82f00-863e-11e9-94c9-55792f979552.png)
+![Figure_8-2](https://user-images.githubusercontent.com/51190969/58800906-10d7ff80-8644-11e9-9a8f-83eb668ced0d.png)
+![Figure_8-2](https://user-images.githubusercontent.com/51190969/58801050-70360f80-8644-11e9-8107-838e586d1a15.png)
 
 ## 부산광역시 지도
 ~~~python
@@ -176,3 +184,5 @@ i=(ggplot(pusan_6)
 print(i)
 ~~~
 ![Figure_9-2](https://user-images.githubusercontent.com/51190969/58798896-d6b82f00-863e-11e9-8ad3-c72a774390a7.png)
+![Figure_9-2](https://user-images.githubusercontent.com/51190969/58801076-82b04900-8644-11e9-9947-9caa5c3fe303.png)
+![Figure_9-2](https://user-images.githubusercontent.com/51190969/58801051-70360f80-8644-11e9-9dbb-381ae5e81d57.png)

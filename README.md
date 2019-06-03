@@ -176,6 +176,3 @@ i=(ggplot(pusan_6)
 print(i)
 ~~~
 ![Figure_9-2](https://user-images.githubusercontent.com/51190969/58798896-d6b82f00-863e-11e9-8ad3-c72a774390a7.png)
-
-![4](https://user-images.githubusercontent.com/51190969/58800663-665fdc80-8643-11e9-9ba3-6197ece37707.PNG)
-![5](https://user-images.githubusercontent.com/51190969/58800664-66f87300-8643-11e9-81a0-be8038f85dd1.PNG)
